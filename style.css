@@ -1,0 +1,350 @@
+/* ============================================== */
+/* GLOBAL RESET & SETUP */
+/* ============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; 
+    scroll-behavior: smooth; /* Untuk efek smooth scroll antar slide */
+}
+
+/* Base style untuk semua slide full-page */
+.slide-section {
+    min-height: 100vh; /* Menggunakan min-height agar konten peta/gambar di slide 6 bisa lebih fleksibel */
+    width: 100%;
+    display: flex;
+}
+
+/* ------------------------------------- */
+/* SLIDE 1: HOMEPAGE (HIJAU) */
+/* ------------------------------------- */
+
+.hero-section {
+    background-color: #556048; /* Hijau Tua */
+    display: flex; /* Untuk layout 2 kolom */
+}
+
+.hero-content {
+    flex: 1; 
+    padding: 10%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.hero-content .subtitle {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.hero-content h1 {
+    font-size: 3.5em; 
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.hero-content .description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 550px;
+    opacity: 0.9;
+}
+
+.hero-image {
+    flex: 1; 
+    overflow: hidden; 
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: -50px center; 
+}
+
+/* Tombol EXPLORE */
+.explore-button {
+ background: white;
+  color: #5f6c4f;
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+   font-size: 1em;
+  font-weight: bold;
+  border-radius: 50px;
+   letter-spacing: 1px;
+    width: fit-content;
+    transition: background-color 0.3s;
+
+
+  
+  
+}
+
+
+/* ------------------------------------- */
+/* SLIDE 2: INFORMASI KHUSUS (ASAL USUL - KREM) */
+/* ------------------------------------- */
+
+.specific-section {
+    flex-direction: row; /* Gambar di Kiri, Konten di Kanan */
+    background-color: #f5f0e6; /* Krem Pucat */
+}
+
+.specific-image {
+    flex: 1; 
+    overflow: hidden;
+}
+
+.specific-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50px center; 
+}
+
+.specific-content {
+    flex: 1; 
+    padding: 10%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #444444; 
+}
+
+.specific-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.specific-content .specific-description {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 500px; 
+}
+
+/* ------------------------------------- */
+/* SLIDE 3: INFORMASI UMUM (HIDDEN GEM - HIJAU) */
+/* ------------------------------------- */
+
+.general-section {
+    background-color: #556048; /* Hijau Tua */
+    color: #ffffff;
+    padding: 10%;
+    /* Mengatur konten agar sejajar vertikal dan horizontal */
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.general-content {
+    /* Kolom kiri untuk Judul */
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.general-content .general-subtitle {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    opacity: 0.8;
+}
+
+.general-content h1 {
+    font-size: 3.5em;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.general-text {
+    /* Kolom kanan untuk Teks Deskripsi */
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1em;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.general-text p:first-child {
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------------- */
+/* SLIDE 4: GALERI (KOLASE 4 FOTO) */
+/* ------------------------------------- */
+
+.gallery {
+  background: #e8dfd0;
+  padding: 60px 40px;
+  text-align: center;
+}
+.gallery h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.gallery-row {
+  display: flex;
+  justify-content: center;
+}
+.gallery-row img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+/* ------------------------------------- */
+/* SLIDE 5: REVIEW PENGUNJUNG (HIJAU) */
+/* ------------------------------------- */
+
+.review {
+  background: #5f6c4f;
+  padding: 80px 100px;
+  color: white;
+  text-align: center;
+}
+.review-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.review-box {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  width: 300px;
+  border-radius: 12px;
+}
+.review-box span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+/* ------------------------------------- */
+/* SLIDE 6: LOKASI (MAP INTERAKTIF - HIJAU) */
+/* ------------------------------------- */
+
+.location-section {
+    background-color: #556048; /* Hijau Tua */
+    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Konten di atas */
+    padding-top: 50px;
+}
+
+.location-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.contact-info p {
+    opacity: 0.8;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons i {
+    font-size: 1.2em;
+    margin: 0 10px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.map-container {
+    width: 90%;
+    /* Tinggi map menyesuaikan sisa ruang setelah header */
+    flex: 1; 
+    max-height: 60vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px; /* Sudut sedikit melengkung */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------------------------- */
+/* SLIDE 7: FOOTER / AKHIR PAGE (KREM) */
+/* ------------------------------------- */
+
+.footer-section {
+    background-color: #f5f0e6; /* Krem Pucat */
+    color: #444444;
+    padding: 80px 10%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: auto; /* Agar tidak memaksakan tinggi 100vh */
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex-basis: 30%;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-column p {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.footer-column a {
+    color: #444444;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block; /* Agar setiap link media sosial di baris baru */
+}
+
+.footer-column a:hover {
+    color: #556048;
+}
+
+.copyright {
+    font-size: 0.85em;
+    opacity: 0.7;
+    margin-top: 20px;
+    align-self: flex-start; /* Rata kiri di bawah */
+}
